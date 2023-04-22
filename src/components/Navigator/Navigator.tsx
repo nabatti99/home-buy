@@ -1,8 +1,8 @@
-import { forwardRef } from "react";
-import { Title } from "./Title";
+import { H2, H5, Row } from "@components";
 import { joinCls } from "@utilities";
-import { H1, H2, H5, Row } from "@components";
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
+import { Title } from "./Title";
 
 export const Navigator = forwardRef<HTMLDivElement, NavigatorProps>(({ className, ...props }, ref) => {
 	return (
@@ -23,7 +23,7 @@ export const Navigator = forwardRef<HTMLDivElement, NavigatorProps>(({ className
 							<Link to="/blog">
 								<H5 className="text-black">Blog</H5>
 							</Link>
-							<Link to="/blog">
+							<Link to="/story">
 								<H5 className="text-black">Our Story</H5>
 							</Link>
 						</Row>
