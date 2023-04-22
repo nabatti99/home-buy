@@ -8,3 +8,4 @@ export * from "./skeleton";
 export * from "./splash";
 export * from "./footer";
 export * from "./form";
+export * from "./alert";

@@ -9,7 +9,7 @@ export const Navigator = forwardRef<HTMLDivElement, NavigatorProps>(({ className
 		<>
 			<Title />
 
-			<nav ref={ref} className={joinCls("fixed top-0 left-0 w-full h-16 border-b border-in-gray bg-white z-10", className)} {...props}>
+			<nav ref={ref} className={joinCls("h-16 border-b border-in-gray bg-white z-10", className)} {...props}>
 				<Row className="container mx-auto h-full justify-between items-center gap-14">
 					<Link to="/">
 						<H2 className="text-black">HOME BUY</H2>
