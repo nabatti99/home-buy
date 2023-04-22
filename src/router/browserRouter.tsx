@@ -1,14 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Root } from "@global";
-import { ErrorPage } from "@pages/Error";
-import { homeRoute } from "@pages/Home";
-import { shopRoute } from "@pages/Shop";
+import { ErrorPage } from "@pages/error";
+import { homeRoute } from "@pages/home";
+import { shopRoute } from "@pages/shop";
+import { productRoute } from "@pages/product";
 
 export const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Root />,
 		errorElement: <ErrorPage />,
-		children: [homeRoute, shopRoute],
+		children: [homeRoute, shopRoute, productRoute],
 	},
 ]);

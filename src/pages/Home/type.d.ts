@@ -1,1 +1,1 @@
-type HomeProps = {};
+type HomePageProps = {};
