@@ -9,6 +9,9 @@ import { AppSuspense } from "@services/loading";
 // Global style
 import "./style/global.style.css";
 
+// Remix icon
+import "remixicon/fonts/remixicon.css";
+
 // Custom styles
 import "./style/animation.style.scss";
 
@@ -22,7 +25,7 @@ export const Root = () => {
 
 	return (
 		<>
-			<div className={joinCls("mt-5", isPageLoading || !isStartedSplash ? "invisible" : undefined)}>
+			<div className={joinCls("mt-16", isPageLoading || !isStartedSplash ? "invisible" : undefined)}>
 				{/* Navigation bar */}
 				<Navigator />
 

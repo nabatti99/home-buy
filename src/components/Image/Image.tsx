@@ -30,10 +30,10 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(({ src, lazy = tru
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	if (!lazy) return <img ref={ref} src={src} className={joinCls("img-fluid", fade && "fadeIn animated", className)} {...props} alt={alt} />;
+	if (!lazy) return <img ref={ref} src={src} className={joinCls("object-cover", fade && "fadeIn animated", className)} {...props} alt={alt} />;
 
 	return isIntersected ? (
-		<img ref={ref} src={src} className={joinCls("img-fluid", fade && "fadeIn animated", className)} {...props} alt={alt} />
+		<img ref={ref} src={src} className={joinCls("object-cover", fade && "fadeIn animated", className)} {...props} alt={alt} />
 	) : (
 		<div ref={skeletonRef} className={joinCls("w-100 h-100 overflow-hidden", className)}>
 			<Skeleton className="w-100 h-100" />

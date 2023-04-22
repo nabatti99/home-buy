@@ -6,3 +6,5 @@ export * from "./typography";
 export * from "./navigator";
 export * from "./skeleton";
 export * from "./splash";
+export * from "./footer";
+export * from "./form";

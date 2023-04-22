@@ -24,7 +24,7 @@
 
 	/* Scrollbar Track */
 	::-webkit-scrollbar-track {
-		@apply bg-background;
+		@apply bg-white;
 	}
 
 	/* Scrollbar Handle */

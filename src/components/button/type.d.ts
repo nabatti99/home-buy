@@ -1,4 +1,4 @@
-type ButtonVariant = "fill" | "outline" | "ghost";
+type ButtonVariant = "fill" | "outline";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: ButtonVariant;

@@ -4,13 +4,12 @@ const colors = {
 	black: "#000000",
 	white: "#FFFFFF",
 
-	primary: "#51A4F4",
-	secondary: "#C8E3F6",
-	light: "#F0F4FD",
-	background: "#FAFAFA",
-	dark: "#27282C",
+	accent: "#A18A68",
+	"in-gray": "#D8D8D8",
+	"dark-gray": "#707070",
+	"light-gray": "#EFEFEF",
 
-	whiteAlpha: {
+	"white-alpha": {
 		50: "rgba(255, 255, 255, 0.04)",
 		100: "rgba(255, 255, 255, 0.06)",
 		200: "rgba(255, 255, 255, 0.08)",
@@ -23,7 +22,7 @@ const colors = {
 		900: "rgba(255, 255, 255, 0.92)",
 	},
 
-	blackAlpha: {
+	"black-alpha": {
 		50: "rgba(0, 0, 0, 0.04)",
 		100: "rgba(0, 0, 0, 0.06)",
 		200: "rgba(0, 0, 0, 0.08)",
