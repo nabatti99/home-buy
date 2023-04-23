@@ -1,4 +1,4 @@
-import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, Option, H5, Toggle } from "@components";
+import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, H5, Toggle } from "@components";
 import { joinCls, randomImgUrl } from "@utilities";
 
 export const HomePage = ({}: HomePageProps) => {
@@ -8,26 +8,34 @@ export const HomePage = ({}: HomePageProps) => {
 
 			<Grid className="grid-cols-12 grid-rows-1 mt-10 gap-9">
 				<Column className="col-span-3">
-					<Input placeholder="Search..." />
+					<Input placeholder="Search..." icon={<i className="ri-search-line" />} />
 
-					<Select className="mt-10">
-						<Option>123123</Option>
-						<Option>123123</Option>
-						<Option>123123</Option>
-					</Select>
+					<Select
+						className="mt-10"
+						placeholder="Shop By"
+						options={[
+							{ label: "123", value: "123" },
+							{ label: "1231", value: "1231" },
+							{ label: "1232", value: "1232" },
+						]}
+					/>
 
-					<Select className="mt-4">
-						<Option>123123</Option>
-						<Option>123123</Option>
-						<Option>123123</Option>
-					</Select>
+					<Select
+						className="mt-4"
+						placeholder="Shop By"
+						options={[
+							{ label: "123", value: "123" },
+							{ label: "1231", value: "1231" },
+							{ label: "1232", value: "1232" },
+						]}
+					/>
 
 					<Text className="mt-10">TODO: Range</Text>
 
 					<Row className="justify-between items-center mt-10">
 						<H5>On sale</H5>
 						<div>
-							<Toggle checked={true} />
+							<Toggle checked={false} />
 						</div>
 					</Row>
 
@@ -63,6 +71,8 @@ export const HomePage = ({}: HomePageProps) => {
 					))}
 				</Grid>
 			</Grid>
+
+			<Footer className="mt-52" />
 		</div>
 	);
 };

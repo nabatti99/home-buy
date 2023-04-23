@@ -15,8 +15,8 @@ export const Footer = forwardRef<HTMLDivElement, SkeletonProps>(({ className, ch
 					© 2021 Shelly. <span className="text-dark-gray">Terms of use</span> and <span className="text-dark-gray">privacy policy</span>.
 				</H5>
 			</Column>
-			<Column>
-				<Input placeholder="Enter your email" />
+			<Column className="items-end">
+				<Input placeholder="Enter your email" icon={<i className="ri-mail-line" />} className="w-80" />
 				<Row className="gap-6 text-dark-gray text-2xl mt-8">
 					<i className="ri-linkedin-fill" />
 					<i className="ri-facebook-fill" />

@@ -1,3 +1,5 @@
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {}
+type OptionItem = { value: string; label: string };
 
-interface OptionProps extends React.OptionHTMLAttributes<HTMLOptionElement> {}
+interface SelectProps extends React.InputHTMLAttributes<HTMLInputElement> {
+	options: OptionItem[];
+}
