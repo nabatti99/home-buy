@@ -1,4 +1,4 @@
-import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, Option, H5 } from "@components";
+import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, Option, H5, Toggle } from "@components";
 import { joinCls, randomImgUrl } from "@utilities";
 
 export const HomePage = ({}: HomePageProps) => {
@@ -24,19 +24,16 @@ export const HomePage = ({}: HomePageProps) => {
 
 					<Text className="mt-10">TODO: Range</Text>
 
-					<Row className="justify-between mt-10">
+					<Row className="justify-between items-center mt-10">
 						<H5>On sale</H5>
-						<Text>TODO: Toggle</Text>
+						<div>
+							<Toggle checked={true} />
+						</div>
 					</Row>
 
-					<Row className="justify-between">
+					<Row className="justify-between items-center mt-10">
 						<H5>On sale</H5>
-						<Text>TODO: Toggle</Text>
-					</Row>
-
-					<Row className="justify-between">
-						<H5>In stock</H5>
-						<Text>TODO: Toggle</Text>
+						<Toggle checked={true} />
 					</Row>
 				</Column>
 

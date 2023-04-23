@@ -26,7 +26,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 		return (
 			<button
 				ref={ref}
-				className={joinCls("button px-6 py-3 transition-colors duration-300", buttonClass[variant], className, disabled ? "opacity-50" : "")}
+				className={joinCls("px-6 py-3 transition-colors duration-300", buttonClass[variant], className, disabled ? "opacity-50" : "")}
 				disabled={disabled}
 				type={type}
 				onClick={handleClicked}
