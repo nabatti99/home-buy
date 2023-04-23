@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(({ className, ...props }, ref) => {
 	return (
-		<div ref={ref} className={joinCls("bg-light-gray py-6", className)} {...props}>
+		<div ref={ref} className={joinCls("bg-light-gray py-6 z-10", className)} {...props}>
 			<div className="container mx-auto">
 				<Row className="justify-between items-center">
 					<Row className="gap-4 items-center">

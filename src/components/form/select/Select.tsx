@@ -5,8 +5,8 @@ import { forwardRef } from "react";
 
 export const Select = forwardRef<HTMLDivElement, SelectProps>(({ options, className, value, placeholder, ...props }, ref) => {
 	return (
-		<Menu ref={ref} as="div" className={joinCls("relative", className)}>
-			<input className="!hidden" {...props} />
+		<Menu ref={ref} as="div" className={joinCls("relative", className)} {...props}>
+			<input className="!hidden" value={value} {...props} />
 
 			<Menu.Button className="w-full border border-light-gray p-4">
 				<Row className="justify-between">

@@ -15,6 +15,7 @@
 	* {
 		/* @apply default:text-dark; */
 		@apply transition-all;
+		@apply focus:outline-none;
 	}
 
 	::-webkit-scrollbar {

@@ -1,6 +1,9 @@
-import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, H5 } from "@components";
+import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, H5, Counter, Textarea, Toggle } from "@components";
+import { TabGroup, TabItem, TabList, TabPanel, TabPanels } from "@components/tab";
+import { Tab } from "@headlessui/react";
 import { CardItem } from "@pages/home/components";
 import { joinCls, randomImgUrl } from "@utilities";
+import { StarRating } from "./components";
 
 export const ProductPage = ({}: ProductPageProps) => {
 	return (
@@ -26,14 +29,10 @@ export const ProductPage = ({}: ProductPageProps) => {
 
 					<Column className="col-span-5">
 						<H2>Lira Earings</H2>
-						<H4 className="font-body text-accent mt-6">$ 20,00</H4>
+						<H4 className="font-body text-accent mt-4">$ 20,00</H4>
 
 						<Row className="mt-16 gap-6">
-							<Row className="gap-2">
-								{[...Array(5)].map((_, index) => (
-									<i className="ri-star-fill" />
-								))}
-							</Row>
+							<StarRating onRate={() => {}} totalStars={5} selectedStars={3} />
 							<H5 className="text-dark-gray">1 customer review</H5>
 						</Row>
 
@@ -43,7 +42,7 @@ export const ProductPage = ({}: ProductPageProps) => {
 						</Text>
 
 						<Row className="items-center gap-6 mt-12">
-							<div className="shrink-0">TODO: Counter</div>
+							<Counter className="shrink-0" value={12} />
 							<Button variant="outline" className="grow">
 								ADD TO CART
 							</Button>
@@ -74,7 +73,101 @@ export const ProductPage = ({}: ProductPageProps) => {
 				</Grid>
 			</section>
 
-			<section className="relative mt-28">TODO: Tab</section>
+			<section className="relative mt-28">
+				<TabGroup>
+					<TabList>
+						<TabItem>Description</TabItem>
+						<TabItem>Aditional information</TabItem>
+						<TabItem>Reviews (0)</TabItem>
+					</TabList>
+
+					<TabPanels>
+						<TabPanel>
+							<Text className="text-dark-gray">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero.
+								Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.
+							</Text>
+						</TabPanel>
+
+						<TabPanel>
+							<Column className="gap-4">
+								<Row className="gap-2">
+									<H5>Weight:</H5>
+									<Text className="text-dark-gray">0.3kg</Text>
+								</Row>
+								<Row className="gap-2">
+									<H5>Dimensions:</H5>
+									<Text className="text-dark-gray">15 x 10 x 1 cm</Text>
+								</Row>
+								<Row className="gap-2">
+									<H5>Colors:</H5>
+									<Text className="text-dark-gray">Black, Browns, White</Text>
+								</Row>
+								<Row className="gap-2">
+									<H5>Material:</H5>
+									<Text className="text-dark-gray">Metal</Text>
+								</Row>
+							</Column>
+						</TabPanel>
+
+						<TabPanel>
+							<Grid className="grid-cols-2 grid-rows-1 gap-20">
+								<Column className="col-span-1 gap-8">
+									<H3>2 Reviews for lira earings</H3>
+
+									<Column className="divide-y divide-light-gray">
+										{[...Array(2)].map((_, index) => (
+											<Column className="gap-6 py-10">
+												<Column className="gap-2">
+													<H3>Scarlet Witch</H3>
+													<Text className="text-dark-gray">6 May, 2022</Text>
+													<StarRating onRate={() => {}} totalStars={5} selectedStars={3} />
+												</Column>
+
+												<Text className="text-dark-gray">
+													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit amet, consectetur
+													adipiscing elit. Aliquam placerat.
+												</Text>
+											</Column>
+										))}
+									</Column>
+								</Column>
+
+								<Column className="col-span-1">
+									<H3>Add a Review</H3>
+									<Text className="text-dark-gray text-sm mt-3">Your email address will not be published. Required fields are marked *</Text>
+
+									<Column className="gap-4 mt-16">
+										<Column className="gap-2">
+											<Text>Your Review*</Text>
+											<Textarea rows={3} />
+										</Column>
+
+										<Input placeholder="Enter your name*" />
+										<Input placeholder="Enter your email*" />
+									</Column>
+
+									<Row className="gap-4 mt-8">
+										<Toggle className="shrink-0" />
+										<Text className="text-dark-gray">Save my name, email, and website in this browser for the next time I comment.</Text>
+									</Row>
+
+									<Column className="gap-2 mt-12">
+										<Text>Your Rating*</Text>
+										<StarRating onRate={() => {}} totalStars={5} selectedStars={0} className="text-3xl" enabled />
+									</Column>
+
+									<div className="mt-12">
+										<Button variant="fill" className="px-12">
+											Submit
+										</Button>
+									</div>
+								</Column>
+							</Grid>
+						</TabPanel>
+					</TabPanels>
+				</TabGroup>
+			</section>
 
 			<section className="relative mt-28">
 				<H2>Similar Items</H2>

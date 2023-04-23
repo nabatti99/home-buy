@@ -4,8 +4,9 @@ import { H5, Row } from "@components";
 
 const buttonClass: Record<ButtonVariant, string> = {
 	fill: `
+    border-2 border-transparent 
     bg-black text-white fill-white 
-    hover:bg-white hover:text-black hover:fill-black 
+    hover:bg-white hover:text-black hover:fill-black hover:border-black 
     active:bg-white active:text-black active:fill-black
   `,
 	outline: `

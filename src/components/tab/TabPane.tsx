@@ -1,10 +1,14 @@
-import { joinCls } from "@utilities/text.utils";
 import { forwardRef } from "react";
+import { Tab, Transition } from "@headlessui/react";
+import { joinCls } from "@utilities";
+import { Animation } from "@components";
 
-export const TabPane = forwardRef<HTMLDivElement, TabPaneProps>(({ className, children, ...props }, ref) => {
+export const TabPanel = forwardRef<HTMLDivElement, TabPanesProps>(({ className, children, ...props }, ref) => {
 	return (
-		<div ref={ref} className={joinCls(className)} {...props}>
-			TODO: TabPane
-		</div>
+		<Tab.Panel ref={ref} as="div" className={joinCls("mt-10", className)} {...props}>
+			<Animation animation={[{ name: "fadeIn", duration: "1s" }]}>
+				<div className="">{children}</div>
+			</Animation>
+		</Tab.Panel>
 	);
 });
