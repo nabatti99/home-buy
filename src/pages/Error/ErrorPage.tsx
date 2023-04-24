@@ -1,29 +1,32 @@
 import { useRouteError } from "react-router-dom";
-import errorImg from "./Images/constuction.svg";
-import style from "./style.module.scss";
 import { joinCls } from "@utilities";
-import { Image, Navigator } from "@components";
+import { Button, Center, Column, Footer, H1, H3, Image, Navigator } from "@components";
 
 export const ErrorPage = ({}: ErrorPageProps) => {
 	const error: any = useRouteError();
 	console.error(error);
 
-	return (
-		<div id="error-page" className={joinCls("container", style["error-page"])}>
-			<Navigator />
+	// error.statusText || error.message
 
-			<div className="row justify-content-center text-center position-relative z-1">
-				<Image className="w-75 w-lg-50" src={errorImg} />
-				<h1>Oops!</h1>
-				<p>This page is under construction, but we are ready to go! We are preparing something amazing and exciting for you. See you soon.</p>
-				<p>
-					<i>{error.statusText || error.message}</i>
-				</p>
-				<div className="col-8 col-lg-4 mt-1">
-					<button className="text-uppercase btn btn-outline-gradient rounded-pill px-4">Back to Home</button>
-				</div>
-			</div>
-		</div>
+	return (
+		<Column className="relative container h-screen mx-auto">
+			<Navigator className="fixed top-0 left-0 w-full" />
+
+			<Center className="grow flex-col gap-8 pt-16">
+				<H1>404 ERROR</H1>
+				<H3 className="text-center text-dark-gray">
+					This page not found
+					<br />
+					Back to home and start again
+				</H3>
+
+				<div className="w-80 h-[1px] bg-in-gray" />
+
+				<Button variant="outline">BACK TO HOMEPAGE</Button>
+			</Center>
+
+			<Footer />
+		</Column>
 	);
 };
 
