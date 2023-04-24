@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 export const Footer = forwardRef<HTMLDivElement, SkeletonProps>(({ className, children, ...props }, ref) => {
 	return (
-		<Row ref={ref} className={joinCls("justify-between items-end h-80 pb-32 border-t border-light-gray", className)} {...props}>
+		<Row ref={ref} className={joinCls("justify-between items-end py-16 border-t border-light-gray", className)} {...props}>
 			<Column>
 				<Row className="gap-10">
 					<H5 className="text-dark-gray">CONTACT</H5>

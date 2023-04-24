@@ -1,3 +1,4 @@
 export * from "./constants";
 export * from "./HomePage";
-export * from "./homeRoute";
+export * from "./route";
+export * from "./messages";

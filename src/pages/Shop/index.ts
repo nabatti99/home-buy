@@ -1,3 +1,4 @@
 export * from "./constants";
 export * from "./ShopPage";
-export * from "./shopRoute";
+export * from "./route";
+export * from "./messages";

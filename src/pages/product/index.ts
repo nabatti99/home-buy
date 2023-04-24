@@ -1,3 +1,4 @@
 export * from "./constants";
 export * from "./ProductPage";
-export * from "./productRoute";
+export * from "./route";
+export * from "./messages";

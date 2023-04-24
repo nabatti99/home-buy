@@ -1,10 +1,34 @@
+import { HOME_PAGE_PATH } from "@pages/home";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { MY_ACCOUNT_PAGE_PATH } from "@pages/my-account";
+import { PRODUCT_PAGE_PATH } from "@pages/product";
+import { SHOP_PAGE_PATH } from "@pages/shop";
+import { matchPath, useLocation } from "react-router-dom";
+
+const routes: RouteItem[] = [
+	{
+		name: "Home Buy",
+		path: HOME_PAGE_PATH,
+	},
+	{
+		name: "Shop",
+		path: SHOP_PAGE_PATH,
+	},
+	{
+		name: "Product",
+		path: PRODUCT_PAGE_PATH,
+	},
+	{
+		name: "My Account",
+		path: MY_ACCOUNT_PAGE_PATH,
+	},
+];
 
 export const Title = () => {
 	const location = useLocation();
 
-	const title = location.pathname;
+	const matchedRoute = routes.find((route) => matchPath(route.path, location.pathname));
+	const title = matchedRoute?.name || "Home Buy";
 
 	return (
 		<Helmet>

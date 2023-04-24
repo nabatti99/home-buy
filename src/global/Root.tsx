@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { shallowEqual } from "react-redux";
 import { Outlet } from "react-router-dom";
-import { Alert, Navigator, Splash } from "@components";
+import { Alert, Column, Navigator, Splash } from "@components";
 import { useAppSelector } from "@store";
 import { joinCls } from "@utilities";
 import { AppSuspense } from "@services/loading";
@@ -25,18 +25,20 @@ export const Root = () => {
 
 	return (
 		<>
-			<div className={joinCls("relative mt-16", isPageLoading || !isStartedSplash ? "invisible" : undefined)}>
+			<Column className={joinCls("relative h-screen", isPageLoading || !isStartedSplash ? "invisible" : undefined)}>
 				{/* Navigation bar */}
 				<Navigator className="fixed top-0 left-0 w-full" />
 
 				{/* Notification will show here */}
-				<Alert className="fixed top-16 left-0 w-full" />
+				{/* <Alert className="fixed top-16 left-0 w-full" /> */}
 
-				<AppSuspense>
-					{/* Page will render here */}
-					<Outlet />
-				</AppSuspense>
-			</div>
+				<div className="grow pt-16">
+					<AppSuspense>
+						{/* Page will render here */}
+						<Outlet />
+					</AppSuspense>
+				</div>
+			</Column>
 
 			{/* Splash */}
 			<Splash onStart={() => setIsStartedSplash(true)} />

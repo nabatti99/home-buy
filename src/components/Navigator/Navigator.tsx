@@ -18,22 +18,28 @@ export const Navigator = forwardRef<HTMLDivElement, NavigatorProps>(({ className
 					<Row className="items-center gap-16">
 						<Row className="items-center gap-20">
 							<Link to="/shop">
-								<H5 className="text-black">Shop</H5>
+								<H5 className="text-black hover:text-accent">Shop</H5>
 							</Link>
 							<Link to="/blog">
-								<H5 className="text-black">Blog</H5>
+								<H5 className="text-black hover:text-accent">Blog</H5>
 							</Link>
 							<Link to="/story">
-								<H5 className="text-black">Our Story</H5>
+								<H5 className="text-black hover:text-accent">Our Story</H5>
 							</Link>
 						</Row>
 
 						<div className="h-5 w-[1px] bg-dark-gray" />
 
 						<Row className="items-center gap-16">
-							<i className="ri-search-line text-base ri-lg" />
-							<i className="ri-shopping-cart-line ri-lg" />
-							<i className="ri-user-line ri-lg" />
+							<Link to="/shop">
+								<i className="ri-search-line text-base ri-lg hover:text-accent" />
+							</Link>
+							<Link to="/shop">
+								<i className="ri-shopping-cart-line ri-lg hover:text-accent" />
+							</Link>
+							<Link to="/shop">
+								<i className="ri-user-line ri-lg hover:text-accent" />
+							</Link>
 						</Row>
 					</Row>
 				</Row>
