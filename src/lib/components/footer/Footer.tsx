@@ -16,7 +16,7 @@ export const Footer = forwardRef<HTMLDivElement, SkeletonProps>(({ className, ch
 				</H5>
 			</Column>
 			<Column className="items-end">
-				<Input placeholder="Give an email, get the newsletter" icon={<i className="ri-mail-line" />} className="w-96" />
+				<Input placeholder="Give an email, get the newsletter" icon={<i className="ri-mail-line" />} className="!w-96" />
 				<Row className="gap-6 text-dark-gray text-2xl mt-8">
 					<i className="ri-linkedin-fill hover:text-accent cursor-pointer" />
 					<i className="ri-facebook-fill hover:text-accent cursor-pointer" />

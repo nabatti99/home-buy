@@ -1,3 +1,3 @@
 export * from "./constants";
-export * from "./MyAccount";
+export * from "./ResetPassword";
 export * from "./route";

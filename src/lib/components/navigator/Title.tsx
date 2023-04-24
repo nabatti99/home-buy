@@ -1,6 +1,6 @@
 import { HOME_PAGE_PATH } from "@pages/home";
 import { Helmet } from "react-helmet";
-import { MY_ACCOUNT_PAGE_PATH } from "@pages/my-account";
+import { MY_ACCOUNT_PAGE_PATH } from "@pages/account.group/my-account";
 import { PRODUCT_PAGE_PATH } from "@pages/product";
 import { SHOP_PAGE_PATH } from "@pages/shop";
 import { matchPath, useLocation } from "react-router-dom";

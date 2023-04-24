@@ -3,7 +3,7 @@ import { Tab } from "@headlessui/react";
 import { joinCls, randomImgUrl } from "@utilities";
 import { Link } from "react-router-dom";
 
-export const MyAccount = ({}: MyAccountProps) => {
+export const MyAccountPage = ({}: MyAccountProps) => {
 	return (
 		<Column className="container mx-auto min-h-full">
 			<Center className="grow">
@@ -39,8 +39,8 @@ export const MyAccount = ({}: MyAccountProps) => {
 									<Input placeholder="Email" />
 									<Input placeholder="Password" type="password" />
 									<Row className="justify-end gap-4">
-										<Toggle />
 										<H5>Remember me</H5>
+										<Toggle />
 									</Row>
 								</Column>
 
@@ -53,7 +53,17 @@ export const MyAccount = ({}: MyAccountProps) => {
 								</Link>
 							</TabPanel>
 
-							<TabPanel></TabPanel>
+							<TabPanel>
+								<Column className="gap-4">
+									<Input placeholder="Email" />
+									<Input placeholder="Password" type="password" />
+									<Input placeholder="Retype password" type="password" />
+								</Column>
+
+								<Button variant="fill" className="w-full mt-16">
+									Register
+								</Button>
+							</TabPanel>
 						</TabPanels>
 					</Tab.Group>
 				</Column>
@@ -65,4 +75,4 @@ export const MyAccount = ({}: MyAccountProps) => {
 };
 
 // Using for lazy loading page
-export default MyAccount;
+export default MyAccountPage;

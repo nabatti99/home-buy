@@ -4,13 +4,13 @@ import { ErrorPage } from "@pages/error";
 import { homeRoute } from "@pages/home";
 import { shopRoute } from "@pages/shop";
 import { productRoute } from "@pages/product";
-import { myAccountRoute } from "@pages/my-account";
+import { accountRoutes } from "@pages/account.group";
 
 export const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Root />,
 		errorElement: <ErrorPage />,
-		children: [homeRoute, shopRoute, productRoute, myAccountRoute],
+		children: [homeRoute, shopRoute, productRoute, ...accountRoutes],
 	},
 ]);
