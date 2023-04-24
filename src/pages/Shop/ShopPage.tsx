@@ -1,4 +1,4 @@
-import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, H5, Toggle } from "@components";
+import { Button, Center, Column, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, H5, Toggle, Footer } from "@components";
 import { CardItem } from "@pages/home/components";
 import { joinCls, randomImgUrl } from "@utilities";
 

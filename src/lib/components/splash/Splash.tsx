@@ -1,10 +1,9 @@
 import { forwardRef, useEffect, useState } from "react";
 import { shallowEqual } from "react-redux";
-import { useAppDispatch } from "store/hooks/useAppDispatch";
-import { useAppSelector } from "store/hooks/useAppSelector";
 import { setPageLoading } from "@services/loading/redux/loading.slice";
 import { Animation } from "@components/animation";
 import { joinCls } from "@utilities/text.utils";
+import { useAppDispatch, useAppSelector } from "@store";
 
 export const Splash = forwardRef<HTMLDivElement, SplashProps>(({ className, children, onStart = () => {}, ...props }, ref) => {
 	const dispatch = useAppDispatch();

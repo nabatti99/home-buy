@@ -12,13 +12,13 @@ module.exports = function override(config, env) {
 			// Configure path aliases
 			alias: {
 				...config.resolve.alias,
-				"@global": path.resolve(__dirname, "./src/global"),
-				"@components": path.resolve(__dirname, "./src/components"),
+				"@global": path.resolve(__dirname, "./src/lib/global"),
+				"@components": path.resolve(__dirname, "./src/lib/components"),
+				"@store": path.resolve(__dirname, "./src/lib/store"),
+				"@router": path.resolve(__dirname, "./src/lib/router"),
+				"@services": path.resolve(__dirname, "./src/lib/services"),
+				"@utilities": path.resolve(__dirname, "./src/lib/utilities"),
 				"@pages": path.resolve(__dirname, "./src/pages"),
-				"@store": path.resolve(__dirname, "./src/store"),
-				"@router": path.resolve(__dirname, "./src/router"),
-				"@services": path.resolve(__dirname, "./src/services"),
-				"@utilities": path.resolve(__dirname, "./src/utilities"),
 			},
 		},
 	};
