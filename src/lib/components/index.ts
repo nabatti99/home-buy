@@ -10,3 +10,4 @@ export * from "./footer";
 export * from "./form";
 export * from "./alert";
 export * from "./tab";
+export * from "./table";

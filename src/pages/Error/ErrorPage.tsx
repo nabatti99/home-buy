@@ -1,12 +1,9 @@
+import { Button, Center, Column, Footer, H1, H3, Navigator } from "@components";
 import { useRouteError } from "react-router-dom";
-import { joinCls } from "@utilities";
-import { Button, Center, Column, Footer, H1, H3, Image, Navigator } from "@components";
 
 export const ErrorPage = ({}: ErrorPageProps) => {
 	const error: any = useRouteError();
 	console.error(error);
-
-	// error.statusText || error.message
 
 	return (
 		<Column className="relative container h-screen mx-auto">

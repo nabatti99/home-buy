@@ -1,5 +1,4 @@
-import { Button, Center, Column, Footer, Grid, H1, H2, H3, H4, Image, Input, Overlay, Row, Text, Select, H5, Toggle, TabPanels, TabPanel } from "@components";
-import { joinCls, randomImgUrl } from "@utilities";
+import { Button, Center, Column, Footer, H1, H3, Input } from "@components";
 
 export const ResetPasswordPage = ({}: ResetPasswordProps) => {
 	return (
