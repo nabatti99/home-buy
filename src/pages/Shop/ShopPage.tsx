@@ -2,7 +2,7 @@ import { Button, Center, Column, Grid, H1, H2, H3, H4, Image, Input, Overlay, Ro
 import { CardItem } from "@pages/home/components";
 import { joinCls, randomImgUrl } from "@utilities";
 
-export const HomePage = ({}: HomePageProps) => {
+export const ShopPage = ({}: ShopPageProps) => {
 	return (
 		<div className="container mx-auto">
 			<H1 className="text-dark pt-24">Shop The Latest</H1>
@@ -61,4 +61,4 @@ export const HomePage = ({}: HomePageProps) => {
 };
 
 // Using for lazy loading page
-export default HomePage;
+export default ShopPage;

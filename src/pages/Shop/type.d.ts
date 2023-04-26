@@ -1,1 +1,1 @@
-type ShopProps = {};
+type ShopPageProps = {};

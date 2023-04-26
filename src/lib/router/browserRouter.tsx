@@ -6,12 +6,13 @@ import { shopRoute } from "@pages/shop";
 import { productRoute } from "@pages/product";
 import { accountRoute } from "@pages/account";
 import { myAccountRoute, resetPasswordRoute } from "@pages/authentication.group";
+import { shoppingCartRoute } from "@pages/shoping-cart";
 
 export const router = createBrowserRouter([
 	{
 		path: ROOT,
 		element: <Root />,
 		errorElement: <ErrorPage />,
-		children: [homeRoute, shopRoute, productRoute, accountRoute, myAccountRoute, resetPasswordRoute],
+		children: [homeRoute, shopRoute, productRoute, accountRoute, myAccountRoute, resetPasswordRoute, shoppingCartRoute],
 	},
 ]);
