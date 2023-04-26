@@ -49,7 +49,9 @@ export const Account = ({}: AccountProps) => {
 						<Link to="payments">
 							<TabItem>Payments</TabItem>
 						</Link>
-						<TabItem>Settings</TabItem>
+						<Link to="settings">
+							<TabItem>Settings</TabItem>
+						</Link>
 					</TabList>
 
 					<Animation watching={currentTabIndex} animation={[{ name: "fadeIn", duration: "0.4s" }]} className="mt-10">

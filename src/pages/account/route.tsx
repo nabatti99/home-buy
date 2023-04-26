@@ -5,11 +5,12 @@ import { dashboardRoute } from "./pages/dashboard";
 import { ordersRoute } from "./pages/orders";
 import { deliveriesRoute } from "./pages/deliveries";
 import { paymentsRoute } from "./pages/payments";
+import { settingsRoute } from "./pages/settings";
 
 const AccountPage = lazy(() => import("./AccountPage"));
 
 export const accountRoute: RouteObject = {
 	path: ACCOUNT_PAGE,
 	element: <AccountPage />,
-	children: [dashboardRoute, ordersRoute, deliveriesRoute, paymentsRoute],
+	children: [dashboardRoute, ordersRoute, deliveriesRoute, paymentsRoute, settingsRoute],
 };
